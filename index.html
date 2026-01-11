@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="JMax Consulting - Transform your business with expert consulting services in strategy, digital transformation, and business growth.">
+    <title>JMax Consulting - Transform Your Business</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'outfit': ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f5d0fe',
+                            300: '#f0abfc',
+                            400: '#e879f9',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            800: '#86198f',
+                            900: '#701a75',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="logo-icon">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <span class="text-2xl font-outfit font-bold logo-text">JMax</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#case-study" class="nav-link">Case Study</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link-mobile">Home</a>
+                    <a href="#services" class="nav-link-mobile">Services</a>
+                    <a href="#about" class="nav-link-mobile">About</a>
+                    <a href="#case-study" class="nav-link-mobile">Case Study</a>
+                    <a href="#contact" class="nav-link-mobile">Contact</a>
+                    <button class="btn-primary w-full">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-6 animate-fade-in-up">
+                    <div class="inline-block">
+                        <span class="badge">🚀 Transform Your Business</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-outfit font-bold leading-tight">
+                        Consulting That
+                        <span class="gradient-text">Drives Results</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 leading-relaxed">
+                        Empowering organisations to build stable, capable workforces for long-term,
+                        sustainable growth. Partnering with businesses to strengthen capability and
+                        deliver lasting success.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button class="btn-primary btn-large group">
+                            Start Your Journey
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="btn-secondary btn-large group">
+                            <i class="fas fa-play mr-2"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gradient-text">500+</div>
+                            <div class="text-sm text-gray-300">Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gradient-text">98%</div>
+                            <div class="text-sm text-gray-300">Success Rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold gradient-text">15+</div>
+                            <div class="text-sm text-gray-300">Years Exp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Illustration -->
+                <div class="relative animate-fade-in">
+                    <div class="hero-card">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+                            alt="Professional Team Collaboration" class="w-full rounded-xl" id="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white opacity-70 hover:opacity-100 transition-opacity">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="badge mb-4">Our Consulting Approach</span>
+                <h2 class="section-title">Strategic Workforce Solutions</h2>
+                <p class="section-subtitle">We believe workforce challenges require more than recruitment solutions.
+                    They require strategic diagnosis, redesign, and long-term capability building.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="service-icon bg-gradient-to-br from-blue-500 to-cyan-500">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Workforce Capability Gap Evaluation</h3>
+                    <p class="text-gray-300 mb-4">
+                        Identify skill gaps and capability deficiencies to build a stronger, more competent workforce.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Skills Assessment
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Competency Mapping
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Gap Analysis Reports
+                        </li>
+                    </ul>
+                    <button class="btn-link group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="service-icon bg-gradient-to-br from-purple-500 to-pink-500">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Training & Development Roadmap Design</h3>
+                    <p class="text-gray-300 mb-4">
+                        Create structured learning pathways that build future-ready capabilities and technical
+                        expertise.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Learning Pathway Design
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Upskilling Programs
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Leadership Development
+                        </li>
+                    </ul>
+                    <button class="btn-link group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="service-icon bg-gradient-to-br from-orange-500 to-red-500">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Retention Risk Assessment</h3>
+                    <p class="text-gray-300 mb-4">
+                        Identify and mitigate turnover risks to retain your most valuable technical talent.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Turnover Analysis
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Exit Interview Insights
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Retention Strategies
+                        </li>
+                    </ul>
+                    <button class="btn-link group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="service-icon bg-gradient-to-br from-green-500 to-emerald-500">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Employee Engagement & Wellbeing Strategy</h3>
+                    <p class="text-gray-300 mb-4">
+                        Foster a positive workplace culture that prioritizes employee wellbeing and engagement.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Engagement Surveys
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Wellbeing Programs
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Culture Development
+                        </li>
+                    </ul>
+                    <button class="btn-link group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.5s">
+                    <div class="service-icon bg-gradient-to-br from-indigo-500 to-blue-500">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Performance & Progression Frameworks</h3>
+                    <p class="text-gray-300 mb-4">
+                        Design clear career pathways and performance systems that drive growth and accountability.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Performance Management
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            Career Progression Paths
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-check text-green-400 mr-2"></i>
+                            KPI Development
+                        </li>
+                    </ul>
+                    <button class="btn-link group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethics & Sustainability Section -->
+    <section class="section-padding bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-green-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="badge mb-4">Ethics & Sustainability</span>
+                <h2 class="section-title">Our Commitment to Ethical Practice</h2>
+                <p class="section-subtitle">
+                    JMAX People Consulting Group promotes ethical and sustainable practices across all workforce
+                    solutions.
+                    Our approach is guided by the following principles:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Ethics Card 1 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="service-icon bg-gradient-to-br from-blue-500 to-indigo-500">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Ethical Governance & Data Confidentiality</h3>
+                    <p class="text-gray-300 mb-4">
+                        Upholding strong governance standards and protecting client and employee data with integrity.
+                    </p>
+                </div>
+
+                <!-- Ethics Card 2 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="service-icon bg-gradient-to-br from-green-500 to-teal-500">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Sustainable Workforce Models</h3>
+                    <p class="text-gray-300 mb-4">
+                        Designing long-term workforce solutions that reduce attrition and minimise recruitment waste.
+                    </p>
+                </div>
+
+                <!-- Ethics Card 3 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="service-icon bg-gradient-to-br from-purple-500 to-pink-500">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Inclusive Workplaces & Fair Work Practices</h3>
+                    <p class="text-gray-300 mb-4">
+                        Supporting inclusive environments that promote fairness, wellbeing, and equal opportunity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div class="about-image-container">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+                            alt="Business Team Success" class="w-full rounded-xl" id="about-image">
+                    </div>
+                </div>
+
+                <div class="space-y-6 animate-on-scroll">
+                    <span class="badge">About Us</span>
+                    <h2 class="section-title">Building Strong, Resilient Teams</h2>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        JMAX People Consulting Group is a workforce strategy and organisational development
+                        consultancy helping businesses build strong, resilient teams with high retention and
+                        future-focused capabilities. Our expertise lies in solving people-related operational
+                        challenges using evidence-based insights, ethical consulting practices, and structured
+                        project delivery.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Under the leadership of Pratheeba Bruno, JMAX supports organisations in sustainability-led
+                        and renewable technology sectors, where retaining skilled technical talent is essential
+                        for long-term growth and successful project outcomes.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-6">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Award Winning</h4>
+                            <p class="text-gray-400 text-sm">Industry recognized excellence</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Global Reach</h4>
+                            <p class="text-gray-400 text-sm">Serving clients worldwide</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Trusted Partner</h4>
+                            <p class="text-gray-400 text-sm">Long-term relationships</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Expert Team</h4>
+                            <p class="text-gray-400 text-sm">Top industry professionals</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary mt-6">
+                        Learn More About Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="animate-on-scroll">
+                    <div class="text-5xl font-bold text-white mb-2" data-count="500">0</div>
+                    <div class="text-xl text-white opacity-90">Projects Completed</div>
+                </div>
+                <div class="animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="text-5xl font-bold text-white mb-2" data-count="250">0</div>
+                    <div class="text-xl text-white opacity-90">Happy Clients</div>
+                </div>
+                <div class="animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="text-5xl font-bold text-white mb-2" data-count="50">0</div>
+                    <div class="text-xl text-white opacity-90">Expert Consultants</div>
+                </div>
+                <div class="animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="text-5xl font-bold text-white mb-2" data-count="15">0</div>
+                    <div class="text-xl text-white opacity-90">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="section-padding bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="badge mb-4">Case Study</span>
+                <h2 class="section-title">Client Success Story</h2>
+                <p class="section-subtitle">How we helped GreenTech Innovation transform their workforce strategy</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <!-- Client Overview -->
+                <div class="service-card mb-8 animate-on-scroll">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="service-icon bg-gradient-to-br from-green-500 to-emerald-500">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">GreenTech Innovation Pvt Ltd</h3>
+                            <p class="text-blue-400 font-semibold">UK-Based Renewable Energy Organisation</p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        A UK-based renewable energy organisation specialising in solar technology installation and
+                        sustainable project expansion. GreenTech has experienced rapid growth driven by increased demand
+                        for government-led sustainability targets and clean energy solutions.
+                    </p>
+                </div>
+
+                <!-- Challenge -->
+                <div class="service-card mb-8 animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-exclamation-circle text-red-400 text-2xl"></i>
+                        <h3 class="text-2xl font-bold text-white">The Challenge</h3>
+                    </div>
+
+                    <div class="space-y-4 text-gray-300">
+                        <p class="leading-relaxed">
+                            Despite rapid expansion, GreenTech faced critical workforce challenges that threatened
+                            operational performance and project delivery:
+                        </p>
+
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-arrow-right text-blue-400 mt-1"></i>
+                                <span><strong class="text-white">Low Employee Engagement:</strong> Declining morale
+                                    among
+                                    technical staff affecting productivity and quality</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-arrow-right text-blue-400 mt-1"></i>
+                                <span><strong class="text-white">High Retention Issues:</strong> Significant turnover in
+                                    site-based and technical roles requiring specialized expertise</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-arrow-right text-blue-400 mt-1"></i>
+                                <span><strong class="text-white">Capability Gaps:</strong> Insufficient trained
+                                    employees to
+                                    support expanding solar projects</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-arrow-right text-blue-400 mt-1"></i>
+                                <span><strong class="text-white">Communication Breakdowns:</strong> Ineffective
+                                    communication across departments and operational sites leading to unclear role
+                                    expectations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-arrow-right text-blue-400 mt-1"></i>
+                                <span><strong class="text-white">Project Delivery Impact:</strong> Inability to deliver
+                                    projects within agreed timelines and budgets</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Our Approach -->
+                <div class="service-card mb-8 animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-lightbulb text-yellow-400 text-2xl"></i>
+                        <h3 class="text-2xl font-bold text-white">Our Approach</h3>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        JMAX People Consulting Group conducted a comprehensive workforce analysis to identify root
+                        causes of employee disengagement and attrition, with particular focus on communication
+                        breakdowns and capability development.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i class="fas fa-search text-blue-400"></i>
+                                Root Cause Analysis
+                            </h4>
+                            <p class="text-gray-400 text-sm">Identified communication gaps and engagement barriers</p>
+                        </div>
+                        <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i class="fas fa-users text-blue-400"></i>
+                                Workforce Strategy
+                            </h4>
+                            <p class="text-gray-400 text-sm">Designed structured retention and capability framework</p>
+                        </div>
+                        <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i class="fas fa-comments text-blue-400"></i>
+                                Communication Enhancement
+                            </h4>
+                            <p class="text-gray-400 text-sm">Implemented cross-departmental communication protocols</p>
+                        </div>
+                        <div class="bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
+                            <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                                <i class="fas fa-graduation-cap text-blue-400"></i>
+                                Training Programs
+                            </h4>
+                            <p class="text-gray-400 text-sm">Developed targeted technical and leadership development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Deliverables -->
+                <div class="service-card mb-8 animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-check-circle text-green-400 text-2xl"></i>
+                        <h3 class="text-2xl font-bold text-white">Key Deliverables</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="text-center p-4">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Workforce Capability Assessment</h4>
+                            <p class="text-gray-400 text-sm">Comprehensive skills gap analysis</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Retention Strategy Roadmap</h4>
+                            <p class="text-gray-400 text-sm">Long-term employee engagement plan</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="text-white font-semibold mb-1">Performance Frameworks</h4>
+                            <p class="text-gray-400 text-sm">Clear progression and accountability systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Statement -->
+                <div class="service-card bg-gradient-to-br from-blue-900 to-blue-800 border-blue-700 animate-on-scroll"
+                    style="animation-delay: 0.4s">
+                    <div class="text-center">
+                        <i class="fas fa-quote-left text-blue-400 text-3xl mb-4"></i>
+                        <p class="text-xl text-white leading-relaxed mb-6 italic">
+                            "JMAX's structured approach helped us understand the real issues affecting our workforce.
+                            Their focus on communication and capability development has been transformational for our
+                            organisation."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-white font-semibold">Operations Director</div>
+                                <div class="text-blue-300 text-sm">GreenTech Innovation Pvt Ltd</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="badge mb-4">Get In Touch</span>
+                <h2 class="section-title">Let's Start Your Transformation</h2>
+                <p class="section-subtitle">Ready to take your business to the next level?</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Form -->
+                <div class="contact-form-container animate-on-scroll">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-white mb-2 font-medium">Full Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2 font-medium">Email Address</label>
+                            <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2 font-medium">Phone Number</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="+44 7307 395084">
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2 font-medium">Service Interested In</label>
+                            <select id="service" class="form-input" required>
+                                <option value="">Select a service</option>
+                                <option value="strategy">Strategy Consulting</option>
+                                <option value="digital">Digital Transformation</option>
+                                <option value="growth">Business Growth</option>
+                                <option value="change">Change Management</option>
+                                <option value="risk">Risk Management</option>
+                                <option value="operations">Operations Excellence</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-white mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="4" class="form-input"
+                                placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full btn-large">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1">Visit Us</h4>
+                            <p class="text-gray-300">London, United Kingdom</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1">Call Us</h4>
+                            <p class="text-gray-300">+44 7307 395084<br>Mon-Fri 9AM-6PM GMT</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold mb-1">Email Us</h4>
+                            <p class="text-gray-300">info@jmaxconsulting.com<br>support@jmaxconsulting.com</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="logo-icon">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <span class="text-xl font-outfit font-bold text-white">JMax</span>
+                    </div>
+                    <p class="text-sm">
+                        Transforming businesses through strategic consulting and innovative solutions.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Strategy Consulting</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Transformation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Business Growth</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Change Management</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Newsletter</h4>
+                    <p class="text-sm mb-4">Subscribe to get the latest insights and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="flex-1 px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit"
+                            class="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-lg hover:from-blue-700 hover:to-purple-700 transition-all">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm">© 2024 JMax Consulting. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
